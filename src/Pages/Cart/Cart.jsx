@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
 
-    const {cartItems, removeFromCart, food_list, getTotalPrice} = useContext(StoreContext);
+    const {cartItems, removeFromCart, food_list, getTotalPrice, url} = useContext(StoreContext);
     const navigate = useNavigate();
 
     return(
@@ -30,7 +30,7 @@ const Cart = () => {
                         return(
                             <>
                              <div className="cart-items-title cart-items-item">
-                                <img src={item.image} alt=""/>
+                                <img src={url+"/images/"+item.image} alt=""/>
                                 <p>{item.name}</p>
                                 <p>${item.price}</p>
                                 <p>{cartItems[item._id]}</p>
@@ -56,12 +56,12 @@ const Cart = () => {
                         <hr/>
                         <div className="cart-total-details">
                             <p>Delivery fee</p>
-                            <p>${10}</p>
+                            <p>${5}</p>
                         </div>
                         <hr/>
                         <div className="cart-total-details">
                              <b>Total</b>
-                             <b>${getTotalPrice() + 10}</b>
+                             <b>${getTotalPrice() + 5}</b>
                         </div>
                     </div>
                     <button onClick={()=>navigate('/order')}>Proceed To Checkout</button>
