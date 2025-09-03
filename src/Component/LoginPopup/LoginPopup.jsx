@@ -37,7 +37,7 @@ const LoginPopup = ({ setShowLogin }) => {
             newUrl += "/api/user/login"
         }
 
-        const response = await axios.post(newUrl, data);
+        const response = await axios.post(newUrl, data,  { withCredentials: true });
         if(response.data.success){
             setData({
                 name:"",
