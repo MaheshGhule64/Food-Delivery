@@ -20,7 +20,7 @@ const FoodItem = ({id, name, price, description, image}) => {
     return (
         <div className="food-item">
             <div className="food-item-img-container">
-                <img src={Context.url+"/uploads/"+image} alt="foodImage" className="food-item-image"/>
+                <img src={Context.url+"/tmp/"+image} alt="foodImage" className="food-item-image"/>
                 {!cartItems[id] ? <img className='add' onClick={()=>{token?addToCart(id):alert("Please login first")}} src={assets.add_icon_white} alt="add_icon"/> : 
                 <div className="food-item-counter">
                     <img className="count-icon" onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt="remove_icon"/>
