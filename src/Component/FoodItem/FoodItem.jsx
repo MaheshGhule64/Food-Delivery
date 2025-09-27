@@ -12,6 +12,8 @@ const FoodItem = ({id, name, price, description, image}) => {
     const data = {id:id, name:name, price:price, description:description, image:image};
 
     const Context = useContext(StoreContext);
+    const My = "Mahesh";
+    console.log(Context);
     console.log(Context.url+"/images/"+image);
     const navigate = useNavigate();
 
