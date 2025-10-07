@@ -64,6 +64,11 @@
     cursor: pointer;
 }
 
+.food-item-img-container .add:hover{
+    border-radius : 50%;
+    background-color : tomato;
+}
+
 .food-item-counter{
     position: absolute;
     bottom: 15px;
