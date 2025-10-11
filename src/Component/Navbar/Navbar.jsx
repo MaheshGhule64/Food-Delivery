@@ -4,6 +4,7 @@ import './Navbar.css';
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
 import { Profiler } from "react";
+import {toast} from 'react-toastify';
 
 
 const Navbar = ({setShowLogin}) => {
@@ -19,6 +20,7 @@ const Navbar = ({setShowLogin}) => {
         setToken("");
         navigate("/");  
         window.location.reload();
+        toast.success("Logout");
         
     
     }
