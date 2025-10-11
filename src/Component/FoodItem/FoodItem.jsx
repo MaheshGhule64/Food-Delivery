@@ -4,6 +4,7 @@ import './FoodItem.css';
 import { assets } from "../../assets/frontend_assets/assets";
 import { StoreContext } from "../../Context/StoreContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 
 
@@ -24,7 +25,7 @@ const FoodItem = ({id, name, price, description, image}) => {
         <div className="food-item">
             <div className="food-item-img-container">
                 <img src={image} alt="foodImage" className="food-item-image"/>
-                {!cartItems[id] ? <img className='add' onClick={()=>{token?addToCart(id):alert("Please login first")}} src={assets.add_icon_white} alt="add_icon"/> : 
+                {!cartItems[id] ? <img className='add' onClick={()=>{token?addToCart(id):toast('Please login first to add food in cart')}} src={assets.add_icon_white} alt="add_icon"/> : 
                 <div className="food-item-counter">
                     <img className="count-icon" onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt="remove_icon"/>
                     <p>{cartItems[id]}</p>
