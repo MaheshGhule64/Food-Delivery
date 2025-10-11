@@ -45,11 +45,9 @@ const LoginPopup = ({ setShowLogin }) => {
                 email:"",
                 password:""
             });
-
-            // loginState==="Sign Up" ? toast.success("Registation Successfull"); : toast.success("Login Successfull");
+            
             if(loginState==="Sign Up"){
             toast.success("Registation Successfull");
-                console.log("loginpopup")
         }
         else{
             toast.success("Login Successfull");
