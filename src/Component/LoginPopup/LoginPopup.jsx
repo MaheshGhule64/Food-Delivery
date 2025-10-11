@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useContext } from "react";
 import { StoreContext } from "../../Context/StoreContext";
 import { useEffect } from "react";
+import { toast } from 'react-toastify';
 
 const LoginPopup = ({ setShowLogin }) => {
 
@@ -45,13 +46,14 @@ const LoginPopup = ({ setShowLogin }) => {
                 password:""
             });
 
+            loginState==="Sign Up" ? toast.success("Registation Successfull"); : toast.success("Login Successfull");
             setToken(response.data.token);
             localStorage.setItem('token', response.data.token);
             setShowLogin(false);
-            
+            window.location.reload();
         }
         else{
-            alert(response.data.message);
+            toast.error(response.data.message);
         }
         
     }
