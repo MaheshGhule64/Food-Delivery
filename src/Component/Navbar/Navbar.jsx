@@ -17,8 +17,9 @@ const Navbar = ({setShowLogin}) => {
 
         localStorage.removeItem('token');
         setToken("");
-        window.location.reload();
         navigate("/");  
+        window.location.reload();
+        
     
     }
 
