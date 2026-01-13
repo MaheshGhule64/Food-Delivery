@@ -58,6 +58,7 @@ const LoginPopup = ({ setShowLogin }) => {
             window.location.reload();
         }
         else{
+            console.log(response.data.message)
             toast.error(response.data.message);
         }
         
