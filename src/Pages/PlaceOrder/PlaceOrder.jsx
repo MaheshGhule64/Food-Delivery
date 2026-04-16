@@ -68,6 +68,9 @@ const PlaceOrder = () => {
                const regex = /^[A-Za-z\s]+$/;
                if(regex.test(e.target.value)) value = e.target.value;
         }
+            else if(name === "email"){
+                value = e.target.value;
+            }
             else if(name === "phone"){
                  const regex = /^[0-9]+$/;
                  if(regex.test(e.target.value)) {
