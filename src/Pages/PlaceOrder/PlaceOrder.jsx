@@ -71,9 +71,10 @@ const PlaceOrder = () => {
             else if(name === "phone"){
                  const regex = /^[0-9]+$/;
                  if(regex.test(e.target.value)) {
-                     if(value.length !== 9 ){
-                     value = e.target.value;
+                     if(value.length === 10 ){
+                    break;
                      }
+                      value = e.target.value;
                  }
             }
         else{
