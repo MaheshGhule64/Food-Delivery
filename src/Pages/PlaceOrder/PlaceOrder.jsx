@@ -71,7 +71,15 @@ const PlaceOrder = () => {
             else if(name === "email"){
                 value = e.target.value;
             }
-            else if(name === "phone"){
+            else if(name === "zipcode"){
+                 const regex = /^[0-9]+$/;
+                 if(regex.test(e.target.value)) {
+                     if(e.target.value.toString().length <= 6){
+                         value = e.target.value;
+                     }
+                 }
+            }
+                else if(name === "phone"){
                  const regex = /^[0-9]+$/;
                  if(regex.test(e.target.value)) {
                      if(e.target.value.toString().length <= 10){
