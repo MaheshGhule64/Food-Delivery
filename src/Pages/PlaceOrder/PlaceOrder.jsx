@@ -65,13 +65,13 @@ const PlaceOrder = () => {
         if(name === "firstName" || name === "lastName" || name === "street" || name === "city" || name === "state" ||
              name === "country"){
                const regex = /^[A-Za-z\s]+$/;
-               if(regex.test(e.target.value)) let value = data.name + e.target.value;
-            setData(data=>({...data, [name]:value}));
+               if(regex.test(e.target.value)){ let value = data.name + e.target.value;
+            setData(data=>({...data, [name]:value}));}
         }
         else{
             const regex = /^[0-9]+$/;
-            if(regex.test(e.target.value)) value = data.name + e.target.value;
-            setData(data=>({...data, [name]:value}));
+            if(regex.test(e.target.value)) { let value = data.name + e.target.value;
+            setData(data=>({...data, [name]:value}));}
         }
 
         
