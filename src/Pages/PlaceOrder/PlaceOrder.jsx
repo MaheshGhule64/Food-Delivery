@@ -60,7 +60,7 @@ const PlaceOrder = () => {
         // let value = e.target.value;
 
          let name = e.target.name;
-        let value = e.target.value;
+        let value = "";
         
 
         if(name === "firstName" || name === "lastName" || name === "street" || name === "city" || name === "state" ||
@@ -74,7 +74,7 @@ const PlaceOrder = () => {
             else if(name === "phone"){
                  const regex = /^[0-9]+$/;
                  if(regex.test(e.target.value)) {
-                     if(e.target.value.toString().length <= 9){
+                     if(e.target.value.toString().length <= 10){
                          value = e.target.value;
                      }
                  }
